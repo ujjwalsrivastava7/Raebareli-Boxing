@@ -46,10 +46,14 @@ export const Navbar = ({ onOpenTickets, onOpenRegister, onOpenBooking }) => {
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-red-600 to-boxing-dark flex items-center justify-center border border-red-500/40 shadow-neon-red group-hover:scale-105 transition-transform">
-                <span className="text-2xl">🥊</span>
+              <div className="w-12 h-12 rounded-xl bg-[#0F1118] flex items-center justify-center border border-red-500/50 shadow-neon-red group-hover:scale-105 transition-all overflow-hidden p-0.5">
+                <img
+                  src="/images/ironclad_logo.png"
+                  alt="Ironclad India Boxing Crest"
+                  className="w-full h-full object-cover rounded-lg group-hover:scale-110 transition-transform"
+                />
               </div>
-              <span className="absolute -top-1 -right-1 flex h-3 w-3">
+              <span className="absolute -top-1 -right-1 flex h-3 w-3 pointer-events-none">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
               </span>

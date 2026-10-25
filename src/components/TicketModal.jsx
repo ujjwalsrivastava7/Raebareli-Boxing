@@ -57,17 +57,22 @@ export const TicketModal = ({ isOpen, onClose }) => {
           {!isSuccess ? (
             <div>
               {/* Modal Header */}
-              <div className="mb-6">
-                <div className="flex items-center gap-2 text-xs font-black font-heading text-red-500 uppercase tracking-widest mb-1">
-                  <Ticket className="w-4 h-4" />
-                  <span>OFFICIAL TOURNAMENT BOX OFFICE</span>
+              <div className="mb-6 flex items-start justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-black font-heading text-red-500 uppercase tracking-widest mb-1">
+                    <Ticket className="w-4 h-4" />
+                    <span>OFFICIAL TOURNAMENT BOX OFFICE</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-black font-display text-white uppercase">
+                    {TOURNAMENT_INFO.name}
+                  </h3>
+                  <p className="text-xs text-zinc-400 font-heading">
+                    Date: {TOURNAMENT_INFO.date} • Venue: {TOURNAMENT_INFO.venue}
+                  </p>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-black font-display text-white uppercase">
-                  {TOURNAMENT_INFO.name}
-                </h3>
-                <p className="text-xs text-zinc-400 font-heading">
-                  Date: {TOURNAMENT_INFO.date} • Venue: {TOURNAMENT_INFO.venue}
-                </p>
+                <div className="w-12 h-12 rounded-xl bg-[#0F1118] border border-red-500/50 shadow-neon-red overflow-hidden p-0.5 shrink-0 hidden sm:block">
+                  <img src="/images/ironclad_logo.png" alt="Ironclad Logo" className="w-full h-full object-cover rounded-lg" />
+                </div>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -213,13 +218,18 @@ export const TicketModal = ({ isOpen, onClose }) => {
               {/* Digital Fight Pass Simulation */}
               <div className="mt-6 p-5 rounded-2xl bg-gradient-to-br from-[#171821] to-[#0E0F14] border border-red-500/30 text-left max-w-md mx-auto relative overflow-hidden shadow-2xl">
                 <div className="flex items-center justify-between border-b border-zinc-800 pb-3 mb-3">
-                  <div>
-                    <span className="text-[10px] font-black font-heading text-red-500 uppercase tracking-widest">
-                      BHARAT BOXING PASS #8849-GP
-                    </span>
-                    <h4 className="text-lg font-black font-display text-white uppercase">
-                      {selectedTier.name}
-                    </h4>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-[#0F1118] border border-red-500/50 shadow-neon-red overflow-hidden p-0.5 shrink-0">
+                      <img src="/images/ironclad_logo.png" alt="Ironclad Logo" className="w-full h-full object-cover rounded-md" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black font-heading text-red-500 uppercase tracking-widest">
+                        BHARAT BOXING PASS #8849-GP
+                      </span>
+                      <h4 className="text-lg font-black font-display text-white uppercase">
+                        {selectedTier.name}
+                      </h4>
+                    </div>
                   </div>
                   <span className="text-xs font-mono font-bold text-yellow-400 bg-yellow-500/10 px-2 py-0.5 rounded border border-yellow-500/30">
                     {ticketCount} x PASS

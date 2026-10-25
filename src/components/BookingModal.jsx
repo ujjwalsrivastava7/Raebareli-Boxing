@@ -58,17 +58,22 @@ export const BookingModal = ({ isOpen, onClose, initialProgram = '' }) => {
 
           {!isSuccess ? (
             <div>
-              <div className="mb-6">
-                <div className="flex items-center gap-2 text-xs font-black font-heading text-red-500 uppercase tracking-widest mb-1">
-                  <Flame className="w-4 h-4" />
-                  <span>STEP INTO THE GYM</span>
+              <div className="mb-6 flex items-start justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-black font-heading text-red-500 uppercase tracking-widest mb-1">
+                    <Flame className="w-4 h-4" />
+                    <span>STEP INTO THE GYM</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-black font-display text-white uppercase">
+                    RESERVE YOUR COMBAT SESSION
+                  </h3>
+                  <p className="text-xs text-zinc-400 font-heading">
+                    All first-time attendees receive a complimentary glove and wrap fitting plus coach onboarding.
+                  </p>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-black font-display text-white uppercase">
-                  RESERVE YOUR COMBAT SESSION
-                </h3>
-                <p className="text-xs text-zinc-400 font-heading">
-                  All first-time attendees receive a complimentary glove and wrap fitting plus coach onboarding.
-                </p>
+                <div className="w-12 h-12 rounded-xl bg-[#0F1118] border border-red-500/50 shadow-neon-red overflow-hidden p-0.5 shrink-0 hidden sm:block">
+                  <img src="/images/ironclad_logo.png" alt="Ironclad Logo" className="w-full h-full object-cover rounded-lg" />
+                </div>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -192,9 +197,14 @@ export const BookingModal = ({ isOpen, onClose, initialProgram = '' }) => {
                 Confirmation voucher for <span className="text-white font-bold">{sessionName}</span> at <span className="text-yellow-400 font-mono">{timeSlot}</span> sent to <span className="text-red-400">{email}</span>.
               </p>
 
-              <div className="mt-6 p-4 rounded-xl bg-black/60 border border-zinc-800 text-left text-xs font-heading space-y-1">
-                <p className="text-zinc-400">Location: <span className="text-white">Ironclad Combat Arena, BKC Mumbai (Mat Zone B)</span></p>
-                <p className="text-zinc-400">Gear: <span className="text-yellow-400">{needGloves ? 'Gloves will be prepared for you at check-in' : 'Bring your personal gloves & wraps'}</span></p>
+              <div className="mt-6 p-4 rounded-xl bg-black/60 border border-zinc-800 text-left text-xs font-heading flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-[#0F1118] border border-red-500/50 shadow-neon-red overflow-hidden p-0.5 shrink-0">
+                  <img src="/images/ironclad_logo.png" alt="Ironclad Logo" className="w-full h-full object-cover rounded-md" />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-zinc-400">Location: <span className="text-white">Ironclad Combat Arena, BKC Mumbai (Mat Zone B)</span></p>
+                  <p className="text-zinc-400">Gear: <span className="text-yellow-400">{needGloves ? 'Gloves will be prepared for you at check-in' : 'Bring your personal gloves & wraps'}</span></p>
+                </div>
               </div>
 
               <div className="mt-6">

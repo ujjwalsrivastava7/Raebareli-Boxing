@@ -39,8 +39,12 @@ export const Footer = ({ onOpenTickets, onOpenRegister, onOpenBooking }) => {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-red-600 flex items-center justify-center text-xl shadow-neon-red">
-                🥊
+              <div className="w-12 h-12 rounded-xl bg-[#0F1118] flex items-center justify-center border border-red-500/50 shadow-neon-red overflow-hidden p-0.5">
+                <img
+                  src="/images/ironclad_logo.png"
+                  alt="Ironclad India Boxing Crest"
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="text-2xl font-black font-display text-white tracking-wider">

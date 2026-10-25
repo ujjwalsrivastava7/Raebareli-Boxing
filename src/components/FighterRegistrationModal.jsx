@@ -253,8 +253,10 @@ export const FighterRegistrationModal = ({ isOpen, onClose }) => {
               {/* Digital Fighter Card */}
               <div className="mt-6 p-6 rounded-2xl bg-gradient-to-br from-[#1B1D28] via-[#12131A] to-[#0A0B0E] border-2 border-yellow-500/50 text-left max-w-md mx-auto shadow-2xl relative">
                 <div className="flex items-center justify-between border-b border-zinc-700/80 pb-3 mb-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-2xl">🥊</span>
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-10 h-10 rounded-lg bg-[#0F1118] border border-yellow-500/50 shadow-neon-gold flex items-center justify-center overflow-hidden p-0.5 shrink-0">
+                      <img src="/images/ironclad_logo.png" alt="Ironclad Crest" className="w-full h-full object-cover rounded-md" />
+                    </div>
                     <div>
                       <span className="text-[10px] font-mono font-bold text-yellow-400 uppercase tracking-wider block">
                         BHARAT BOXING ATHLETE LICENSE
